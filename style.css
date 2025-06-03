@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.business-card {
+    width: 600px; /* Adjust as needed */
+    height: 350px; /* Adjust as needed */
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.info-section {
+    flex: 2;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.name {
+    font-size: 2.2em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.title {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin-bottom: 20px;
+    width: 60px; /* Shorter line */
+    text-align: left;
+    margin-left: 0;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start; /* Align icon to top of text */
+    margin-bottom: 12px;
+}
+
+.icon {
+    font-size: 1.2em;
+    color: #007bff;
+    margin-right: 10px;
+    width: 25px; /* Fixed width for icons for alignment */
+    text-align: center;
+    padding-top: 2px; /* Adjust if icons aren't perfectly centered vertically with text */
+}
+
+.contact-details p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #444;
+    line-height: 1.4;
+}
+
+.image-section {
+    flex: 1.2;
+    background-color: #e0f2ff; /* Light blue background for the image section */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.profile-circle {
+    width: 150px; /* Adjust size of the circle */
+    height: 150px; /* Adjust size of the circle */
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #fff; /* White border around the image */
+    box-shadow: 0 0 0 7px #007bff; /* Blue outer ring */
+    position: relative;
+    z-index: 2; /* Ensure it's above the waves */
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the circle without distortion */
+    display: block;
+}
+
+.waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%; /* Adjust height of the wave effect */
+    z-index: 1;
+}
+
+.waves svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.waves svg:nth-child(1) {
+    fill: #007bff; /* Primary blue wave */
+}
+
+.waves svg:nth-child(2) {
+    fill: #0056b3; /* Darker blue wave, slightly offset */
+    transform: translateY(15px); /* Adjust vertical offset */
+    opacity: 0.8;
+}
+
+/* Optional: Add responsive adjustments */
+@media (max-width: 768px) {
+    .business-card {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+    }
+
+    .image-section {
+        height: 200px;
+        flex: none;
+        width: 100%;
+    }
+
+    .profile-circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .info-section {
+        padding: 20px;
+    }
+
+    .waves {
+        height: 100px; /* Adjust wave height for smaller screens */
+    }
+}
